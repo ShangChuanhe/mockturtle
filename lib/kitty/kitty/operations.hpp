@@ -101,6 +101,13 @@ inline TT binary_xor( const TT& first, const TT& second )
   return binary_operation( first, second, std::bit_xor<>() );
 }
 
+/*! \brief Ternary xor of three truth tables */
+template<typename TT>
+inline TT ternary_xor( const TT& first, const TT& second, const TT& third )
+{
+  return ternary_operation( first, second, third, []( auto a, auto b, auto c ) { return ( a ^ ( b ^ c )); } );
+}
+
 /*! \brief Ternary majority of three truth tables */
 template<typename TT>
 inline TT ternary_majority( const TT& first, const TT& second, const TT& third )

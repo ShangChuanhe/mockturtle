@@ -1036,7 +1036,7 @@ bool create_from_expression( TT& tt, const std::string& expression )
     switch ( c )
     {
     default:
-      if ( c >= 'a' && c <= 'p' )
+      if ( c >= 'a' && c <= 'q' )
       {
         auto var = tt.construct();
         create_nth_var( var, c - 'a' );
